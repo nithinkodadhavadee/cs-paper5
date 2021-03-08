@@ -1,0 +1,80 @@
+Section - A
+
+1. What is a web browser? Give an example.
+	A software program that allows a user to locate, access, and display web pages. Browsers are used primarily for displaying and accessing website on the internet, as well as other content created using Markup languages.
+	eg: Google Chrome, Firefox, Safari, Chromium, Brave etc. 
+	 
+2. Write a note on JVM.
+	Java Virtual Machine is a virtual machine which run programs which are compiled to bytecodes. The JVM is detailed by a specification that formally describes what is required in a JVM implementation. 
+	
+3. What is nested if statement? Give an example.
+	A nested if is an if statement that is the target of another if or else, which basically means an if statement inside another if statement.
+	eg:
+		if (i>=10)
+		{
+			if (i<=20)
+				System.out.println("i is in the range [10, 20].");
+			else
+				System.out.println("i is in the range (20, inf).");
+		}
+		else
+			System.out.println("i is in the range (-inf, 10).");
+4. What is a final variable? Give an example.
+	The final keyword in java is used to restrict a user and can be used in many context. In case of a variable, if the variable is defined with a final keyword, we cannot change the value of the variable. It will now be a constant.
+	eg: fina int minAge = 18;
+	
+	
+5. What is vectors?
+	The vector class implements a dynamic array that means it can grow or shrink as required and also has components that can be accessed using an integer index just like an array. It is found in the java.utill package.
+	
+6. Differentiate between string and string buffers.
+	string:
+		- string class is immutable.
+		- string is slow and consumes more memory when you concat too many strings .
+		- string class overrides the equals() method of Object class. So you can compare the contents of two strings by equals() method.
+	string buffer:
+		- string buffer class is mutable.
+		- String buffer is fast and consumes less memory when concatinated multiple strings.
+		- String buffer class doesn't override the equals() method of Object class.
+		
+7. What is a the use of import keyword? Give an example.
+	The import keyword is used to import a package, class or interface. It declares a Java class to use in the code below the import statement. Once a Java class is declared, then the class name can be used in the code without specifiying the package the class belongs to.
+	eg: import java.util.Scanner;
+	    import java.lang.*;
+	    
+8. What is an error? Mention types of errors.
+	
+9. Differentiate between throws and throw keyword.
+	throw: The throw keyword in Java is used to explicitly throw an exception from a method or any block of code.
+	throws: throws is a keyword in Java which is used in the signture method to indicate that this method might throw one of the listed type exceptions.
+	
+10. Write a note on repaint() method.
+11. What is steam classes? Mention two types of steam classes.
+12. Mention any four I/O exceptions.
+
+Section - B
+
+13. 
+a. Explain any five features of Java.
+b. What is command line arguments? Explain with example.
+14.
+a. Explain any five bitwise operators.
+b. Explain any two looping statements with syntax and example.
+15.
+a. Explain classes and objects with syntax and example.
+b. Write a note on visibility controls.
+16.
+a. Write a Java program to sort list of elements in ascending and descending order and show the exception handling.
+b. Explain creating and implementing interfaces with example.
+17.
+a. Write a note on user defined packages.
+b. Explain with neat diagram life cycle of a thread.
+18.
+a. Write a note on implementing runnable interfaces with example.
+b. Explain multiple catch statements with example.
+19.
+a. Explain getting numeric input from the user and display using applet.
+b. Write a Java program to implement keyboard event using applet.
+20.
+a. Explain drawing circles and elipse with example.
+b. Write a note on reading and wirting characters to file.
