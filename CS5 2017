@@ -43,15 +43,42 @@ Section - A
 	    import java.lang.*;
 	    
 8. What is an error? Mention types of errors.
-	
+	Error is an illegal opration performed by the user which results in the abnormal working of the program. The most common errors can be broadly classified as the following.
+
+		- Compile Time error: Compile Time Errors are those errors which prevent the code from running because of an incorrect syntax such as a missing semicolon at the end of a statement or a missing bracket, class not found, etc. These are also sometimes refered to as syntax errors. These errors are detected by the Java compiler at time compile time.
+		- Run Time error: Run time errorl occur during the execution of the program. These does not contain syntax errors but occurs when asked the computer to do something that it is unable to do. There is no way a compiler can detect these so the JVM usually throws out the error when occured.
+		- Logical Error: A logic error is when your program compiles and executes, but does the wrong thing or returns an incorrect result or no output when it should be returning an output. These errors are detected neither by compiler nor by JVM. The Java system has no idea what your program is supposed to do, so it provides no additional information to help you find the error. Logical errors are also called Semantic Errors. These errors are caused due to an incorrect idea or concept used by a programmer while coding. 
+		
+
 9. Differentiate between throws and throw keyword.
 	throw: The throw keyword in Java is used to explicitly throw an exception from a method or any block of code.
 	throws: throws is a keyword in Java which is used in the signture method to indicate that this method might throw one of the listed type exceptions.
 	
 10. Write a note on repaint() method.
-11. What is steam classes? Mention two types of steam classes.
-12. Mention any four I/O exceptions.
+	The repaint() refreshes the view (component), so whenever you make any change on the component, you must call it. For instance, if you rotate the graphical component, you must make a call to repaint() in order to see the change on the containing component
 
+11. What is steam classes? Mention two types of steam classes.
+	Java provides I/O Streams to read and write data where, a Stream represents an input source or an output destination which could be a file, i/o devise, other program etc.
+	In general, a Stream will be an input stream or, an output stream.
+		- InputStream: used to read data from a source.
+		- OutputStream: used to write data to a destination.
+	
+	Based on the data they handle there are two types of streams:
+		- Byte Streams: These handle data in bytes (8 bits) i.e., the byte stream classes read/write data of 8 bits. Using these you can store characters, videos, audios, images etc.
+		- Character Streams: These handle data in 16 bit Unicode. Using these you can read and write text data only.
+		
+12. Mention any four I/O exceptions.
+	- IO Exception: these are signals that an I/O exception of some sort has occured.
+	- CharConversionException: This is a base class for character conversion exceptions.
+	- EOFException: Thes are signals that an end of file or end of the stream has been reached unexpectedly during input.
+	- FileNotFoundException: These are the signals that an attempt to open the file denoted by a specified path name has failed.
+	- InterruptedIOException: This is signals that an I/O operation has been interrupted.
+	- InvalidClassException: This is thrown when the serialization runtime detects one of the followitg problems with a class.
+	- InvalidObjectException: This indicates that one or more deserialized objects failed validaton tests.
+	- SyncFailedException: These are the signals that a sync operation has failed.
+	- UnsupportedEncodingException: This character encoding is not supported.
+	- ObjectStreamEXception: This is a superclass of all exceptions specific to Object Stream classes.
+	- WriteAbortedException: This are signals that one of the ObjectStreamExceptions was thrown during a write operation.
 Section - B
 
 13. 
