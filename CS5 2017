@@ -68,31 +68,196 @@ Section - A
 		- Character Streams: These handle data in 16 bit Unicode. Using these you can read and write text data only.
 		
 12. Mention any four I/O exceptions.
-	- IO Exception: these are signals that an I/O exception of some sort has occured.
-	- CharConversionException: This is a base class for character conversion exceptions.
-	- EOFException: Thes are signals that an end of file or end of the stream has been reached unexpectedly during input.
-	- FileNotFoundException: These are the signals that an attempt to open the file denoted by a specified path name has failed.
-	- InterruptedIOException: This is signals that an I/O operation has been interrupted.
-	- InvalidClassException: This is thrown when the serialization runtime detects one of the followitg problems with a class.
-	- InvalidObjectException: This indicates that one or more deserialized objects failed validaton tests.
-	- SyncFailedException: These are the signals that a sync operation has failed.
-	- UnsupportedEncodingException: This character encoding is not supported.
-	- ObjectStreamEXception: This is a superclass of all exceptions specific to Object Stream classes.
-	- WriteAbortedException: This are signals that one of the ObjectStreamExceptions was thrown during a write operation.
+	pick any four
+		- IO Exception: these are signals that an I/O exception of some sort has occured.
+		- CharConversionException: This is a base class for character conversion exceptions.
+		- EOFException: Thes are signals that an end of file or end of the stream has been reached unexpectedly during input.
+		- FileNotFoundException: These are the signals that an attempt to open the file denoted by a specified path name has failed.
+		- InterruptedIOException: This is signals that an I/O operation has been interrupted.
+		- InvalidClassException: This is thrown when the serialization runtime detects one of the followitg problems with a class.
+		- InvalidObjectException: This indicates that one or more deserialized objects failed validaton tests.
+		- SyncFailedException: These are the signals that a sync operation has failed.
+		- UnsupportedEncodingException: This character encoding is not supported.
+		- ObjectStreamEXception: This is a superclass of all exceptions specific to Object Stream classes.
+		- WriteAbortedException: This are signals that one of the ObjectStreamExceptions was thrown during a write operation.
+		
 Section - B
 
 13. 
 a. Explain any five features of Java.
+	pick any five:
+		- Object Oriented: In Java everything is an Object. Java can be easily extended since it is based on Object model.
+		- Platform Independen: Unlike many other programming languages incuding C and C++, when Java is compiled, it is not compiled into platform specific machine, rather into platform-independent byte code. This byte code is distributed over the web and interpreted by the Virtual Machine on whichever platform it is being run on.
+		- Simple: Java is besigned to be easy to learn. If you understand the basic concept of OOP Java, it would be easy to master.
+		- Secure: With Java's secure feature it enables to develop virus-free, tamper-free systems. Authentication techniques are based on public-key encryption.
+		- Architecture-neutral: Java compiler generates an architecture-neutral object file format, which makes the compiled code executable on many processors, with the presence of Java runtime system.
+		- Portable: Being architecture-neutral and having no implementation dependent aspects of the specification makes Java portable. The compiler in Java is written in ANSI C with a clean portability boundary, which is a POSIX subset.
+		- Robust: Java makes an effort to eliminate error-prone situations by emphasizing mainly on compile time error checking and runtime checking.
+		- Multithreaded: With Java's multithreaded feature it is possible to write programs that can perform many tasks simultaneously. This design feature allows the developers to construct interactive applications that can run smoothly.
+		- Interpreted: Java byte code is translated on the fly to native machine instructions and is not stored anywhere. The development process is more rapid and analytical since the linking is an incremental and light-weight process.
+		- High Performance: With the use of Just-In-Time compilers, Java enables high performance.
+		- Distributed: Java is designed for the distributed environment of the internet.
+		- Dynamic: Java is considered to be more dynamic than C or C++ since it is designed to adapt to an evolving environment. Java programs can carry an extensive amount of run-time information that can be used to verify and resolve accesses to objects at run-time.
+
 b. What is command line arguments? Explain with example.
+	A command-line argument is an information that directly follows the program's name on the command line when it is executed. To access the command-line arguments inside a Java program is quite easy. They are stored as strings in the String array passed to main().
+	eg:
+	public class CommandLine {
+		public static void main(String args[]) {
+			for(int i = 0; i<args.length; i++) {
+				System.out.println("args[" + i + "]: " + args[i]);
+			}
+		}
+	}
+	
 14.
 a. Explain any five bitwise operators.
+	pick any five:
+	Bitwise operators are used to performing manipulation of individual bits of a number. They can be used with any of the integral types.
+		- Bitwise OR (|): This operoator is a binary operator, denoted by '|'. It returns bit by bit OR of input values.
+		- Bitwise AND (&): This operator is a binary operator, denoted by '&'. It returns bit by bit AND of input values.
+		- Bitwise XOR (^): This operator is a binary operator, denoted by '^'. It returns bit by bit XOR of input values.
+		- Bitwise Complement (~): This operator is a unary operator, denoted by '~'. It returns the one's complement representation of the input value.
+		- Signed Right shift operator (>>): Shifts the bits of the number to the right and fills the voids left with the sign bit (1 in case of negative number and 0 in case of positive number). The leftmost bit and a depends on the sign of initial number. Similar effect as of dividing the number with some power of two. 
+		- Unsigned Right shift operator (>>>): Shifts the bits of the number to the right and fills 0 on voids left as a result. The leftmost bit is set to 0. (>>>) is unsigned-shift; it’ll insert 0. (>>) is signed, and will extend the sign bit. 
+		- Left shift operator (<<): Shifts the bits of the number to the left and fills 0 on voids left as a result. Similar effect as of multiplying the number with some power of two. 
+		- Unsigned Left shift operator (<<<): Unlike unsigned Right Shift, there is no “<<<” operator in Java, because the logical (<<) and arithmetic left-shift (<<<) operations are identical.
+	
 b. Explain any two looping statements with syntax and example.
+	pick any two:
+	- while loop: A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement.
+	syntax:
+		while (boolean condition)
+		{
+			loop statements...
+		}
+	eg:
+		class naturalNumbers 
+		{ 
+			public static void main(String args[]) 
+			{ 
+				int x = 1; 
+				System.out.println("Natural numbers less than 10");
+				while (x < 10) 
+				{ 
+					System.out.println(x);  
+					x++; 
+				} 
+			} 
+		} 
+
+	- for loop: for loop provides a concise way of writing the loop structure. Unlike a while loop, a for statement consumes the initialization, condition and increment/decrement in one line thereby providing a shorter, easy to debug structure of looping.
+	syntax:
+		for (initialization condition; testing condition; increment/decrement)
+		{
+    			statement(s)
+		}
+	eg:
+		class naturalNumbers 
+		{ 
+			System.out.println("Natural numbers less than 10");
+			public static void main(String args[]) 
+			{
+				for (int x = 1; x < 10; x++) 
+				System.out.println(x); 
+			} 
+		} 
+
+	- do while: do while loop is similar to while loop with only difference that it checks for condition after executing the statements, and therefore is an example of Exit Control Loop.
+	syntax:
+		do
+		{
+    			statements..
+		}
+		while (condition);
+	eg: 
+		class dowhileloopDemo 
+		{ 
+			public static void main(String args[]) 
+			{ 
+				int x = 21; 
+				do
+				{ 
+					System.out.println("Value of x:" + x); 
+					x++; 
+				} 
+				while (x < 20); 
+			} 
+		} 
+
+
 15.
 a. Explain classes and objects with syntax and example.
+	Classes and Objects are basic concepts of Object Oriented Programming which revolve around the real life entities.
+	Class: A class is a user defined blueprint or prototype from which objects are created.  It represents the set of properties or methods that are common to all objects of one type. In general, class declarations can include these components, in order: 
+		- Modifiers: A class can be public or has default access.
+		- class keyword: class keyword is used to create a class.
+		- Class name: The name should begin with an initial letter.
+		- Superclass(if any): The name of the class’s parent (superclass), if any, preceded by the keyword extends. A class can only extend (subclass) one parent.
+		- Interfaces(if any): A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword implements. A class can implement more than one interface.
+		- Body: The class body surrounded by braces, { }.
+		Constructors are used for initializing new objects. Fields are variables that provides the state of the class and its objects, and methods are used to implement the behavior of the class and its objects.
+	Object: It is a basic unit of Object-Oriented Programming and represents the real life entities.  A typical Java program creates many objects, which as you know, interact by invoking methods. An object consists of: 
+		- State: It is represented by attributes of an object. It also reflects the properties of an object.
+		- Behavior: It is represented by methods of an object. It also reflects the response of an object with other objects.
+		- Identity: It gives a unique name to an object and enables one object to interact with other objects.
+		syntax:
+		
+		eg:
+		
 b. Write a note on visibility controls.
+	these helps to restrict the scope of a class, constructor, variable, method, or data member. There are four types of access modifiers available in java: 
+
+	- Default : When no access modifier is specified for a class, method, or data member – It is said to be having the default access modifier by default. 
+	- Private: Any other class of the same package will not be able to access these members. The methods or data members declared as private are accessible only within the class in which they are declared. The private access modifier is specified using the keyword private.
+	- Protected: The methods or data members declared as protected are accessible within the same package or subclasses in different packages. The protected access modifier is specified using the keyword protected.
+	- Public: The public access modifier has the widest scope among all other access modifiers. Classes, methods, or data members that are declared as public are accessible from everywhere in the program. There is no restriction on the scope of public data members. The public access modifier is specified using the keyword public.
+	
 16.
 a. Write a Java program to sort list of elements in ascending and descending order and show the exception handling.
+	https://drive.google.com/file/d/1rSY6wuYJNvyNI_aUIFrFsUcJqF0v8pgF/view
+	page 23, Ouestion 3
+	
 b. Explain creating and implementing interfaces with example.
+	- Like a class, an interface can have methods and variables, but the methods declared in an interface are by default abstract.  
+	- Interfaces specify what a class must do and not how. It is the blueprint of the class.
+	- An Interface is about capabilities like a Player may be an interface and any class implementing Player must be able to (or must implement) move(). So it specifies a set of methods that the class has to implement.
+	- If a class implements an interface and does not provide method bodies for all functions specified in the interface, then the class must be declared abstract.
+	- A Java library example is, Comparator Interface. If a class implements this interface, then it can be used to sort a collection.
+	Syntax: 
+		interface <interface_name> {
+			// declare constant fields
+    			// declare methods that abstract 
+    			// by default.
+		}
+	
+	To declare an interface, use interface keyword. It is used to provide total abstraction. That means all the methods in an interface are declared with an empty body and are public and all fields are public, static and final by default. A class that implements an interface must implement all the methods declared in the interface. To implement interface use implements keyword.
+
+	eg:
+	import java.io.*; 
+
+	interface In1 
+	{ 
+		final int a = 10;
+		void display(); 
+	} 
+ 
+	class TestClass implements In1 
+	{ 
+		public void display() 
+		{ 
+			System.out.println("Interface"); 
+		} 
+
+		public static void main (String[] args) 
+		{ 
+			TestClass t = new TestClass(); 
+			t.display(); 
+			System.out.println(a); 
+		} 
+	} 
+
+
 17.
 a. Write a note on user defined packages.
 b. Explain with neat diagram life cycle of a thread.
